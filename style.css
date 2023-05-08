@@ -98,3 +98,49 @@ body {
   box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 }
 
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.img-box {
+  margin: 10px;
+  height: 250px;
+  width: 400px;
+  position: relative;
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-box .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .overlay {
+  opacity: 1;
+}
+
+.img-box .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
